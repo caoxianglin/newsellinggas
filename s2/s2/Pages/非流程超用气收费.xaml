@@ -289,7 +289,7 @@
 							<TextBlock Text="找　　零：" Margin="0" Grid.Row="11" TextWrapping="Wrap" TextAlignment="Right" Height="25" Grid.Column="4"/>
 							<TextBox x:Name="f_userid" IsReadOnly="False" Text="{m:Bind Path=f_userid}"  Grid.Column="1" Margin="0,7,10.833,5" TextWrapping="Wrap" Grid.ColumnSpan="1" Height="25" VerticalAlignment="Stretch"  >
 								<a:Data.Prop>
-									<o:PropertySetter PropertyName="f_userid" Value="{m:Exp Str=kbusers.f_userid\=>Completed}"/>
+									<o:PropertySetter PropertyName="f_userid" NoDependValue="{m:Exp Str=kbusers.f_userid\=>Completed}"/>
 								</a:Data.Prop>
 							</TextBox>
 							<Button Click="{m:Exp Str=kbusers.New();kbfee.New();kbsellgas.New();kbbysellgas.New();openxiangou.Result\=null;card.ReadCard()}" Content="读卡" Margin="-6.833,2,0,2" FontSize="12" Grid.Column="2" HorizontalAlignment="Left"/>
