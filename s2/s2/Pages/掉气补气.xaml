@@ -257,7 +257,7 @@
 						</TextBox>
 						<TextBox Text="{m:Bind Path=f_pregas, UpdateOnChange=True}" Grid.Column="3" Margin="0" Grid.Row="6" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.ColumnSpan="1" Width="Auto" Height="25" >
 							<a:Data.Prop>
-								<o:PropertySetter PropertyName="f_pregas" NotNull="True"/>
+                                        <o:PropertySetter PropertyName="f_pregas" Validation="{m:Exp Str=value^\=apply.DataContext.f_nextaddgasamount}" ErrorMessage="补气量不能大于剩余补气量" NotNull="True"/>
 							</a:Data.Prop>
 						</TextBox>
 						<TextBox Text="{m:Bind Path=f_thisnextaddgasamount}" Grid.Column="3" Height="25" Margin="0" Grid.Row="5" TextWrapping="Wrap" VerticalAlignment="Stretch" IsReadOnly="True" HorizontalAlignment="Stretch" Width="Auto">
